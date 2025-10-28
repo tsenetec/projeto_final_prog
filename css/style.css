@@ -1,0 +1,288 @@
+/* -------------------- RESET e Variáveis -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores do Gato Indica Livro */
+    --cor-primaria: #67d0ef;   /* Roxo profundo (remete a mistério, sabedoria, realeza felina) */
+    --cor-secundaria: #9af3c4; /* Amarelo/Dourado (contraste, foco) */
+    --cor-fundo: #faaed9;      /* Bege claro (cor de página de livro antigo) */
+    --cor-texto: #333;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Fonte de livro para o corpo */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+/* -------------------- CABEÇALHO (header) e Navegação (nav) -------------------- */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* -------------------- RODAPÉ (footer) -------------------- */
+footer {
+    background-color: var(--cor-texto); /* Um cinza escuro ou preto para contraste */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px; /* Garante espaço após o conteúdo */
+}
+
+/* -------------------- BOTÃO CTA de Exemplo -------------------- */
+.cta-button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* -------------------- ESTILIZAÇÃO DA PÁGINA SOBRE -------------------- */
+
+.sobre-content {
+    max-width: 900px; /* Limita a largura do conteúdo principal */
+    margin: 40px auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    line-height: 1.6; /* Aumenta o espaçamento das linhas para facilitar a leitura */
+}
+
+.sobre-content h2 {
+    color: var(--cor-primaria); /* Cor principal do tema (ex: Roxo Elegante) */
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--cor-secundaria); /* Linha de destaque para Miss Selene */
+    padding-bottom: 10px;
+}
+
+/* Estilo para a seção de M.V.V. */
+.mvv-container {
+    display: flex;
+    justify-content: space-between; /* Distribui as caixas uniformemente */
+    gap: 20px; /* Espaço entre as caixas */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Garante que quebre a linha em telas pequenas */
+}
+
+.mvv-item {
+    background-color: #F8F8FF; /* Cor de fundo suave (Ghost White) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33% - 20px); /* Cada item ocupa cerca de um terço da tela */
+    min-width: 250px; /* Garante que o item não fique muito estreito */
+    text-align: justify
+}
+
+.mvv-item h3 {
+    color: #8A2BE2; /* Um roxo mais vibrante */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-align: justify
+}
+
+/* Garante que o texto de história e a nota da Miss Selene fiquem bem apresentáveis */
+.history-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+
+/* -------------------- AJUSTE DA PÁGINA SOBRE PARA CARDS -------------------- */
+
+/* 1. Estilo Básico de Card (Aplica arredondamento e sombra a todos os cards) */
+.mvv-item, .card-single {
+    /* O mvv-item já tem isso, mas vamos generalizar e refinar */
+    background-color: #F8F8FF;
+    padding: 25px; 
+    border-radius: 12px; /* Mais arredondamento */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra mais destacada */
+    margin-bottom: 25px; /* Espaço após cada card */
+}
+
+/* 2. Layout para MVV (Os cards que ficam um ao lado do outro) */
+.cards-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+    margin-top: 30px;
+}
+
+/* 3. Estilo para Cards de Largura Total (História e Equipe) */
+.card-single {
+    width: 100%; /* Garante que História e Equipe ocupem a linha toda */
+    margin: 25px 0;
+}
+
+/* 4. Ajuste para o texto justificado dentro dos novos cards (para manter o visual) */
+.card-single p, .card-single blockquote {
+    text-align: justify;
+}
+
+/* Ajuste do separador */
+.separator {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
+}
+
+/* -------------------- ESTILIZAÇÃO DO FORMULÁRIO DE CADASTRO -------------------- */
+
+#form-cadastro {
+    max-width: 500px; /* Limita a largura para centralizar */
+    margin: 40px auto; 
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+}
+
+/* 1. Garante a disposição vertical com espaçamento entre os campos */
+.form-group {
+    display: block; 
+    margin-bottom: 15px;
+}
+
+/* 2. Aplica o arredondamento e largura total nos inputs */
+#form-cadastro input[type="text"],
+#form-cadastro input[type="email"],
+#form-cadastro button {
+    border-radius: 8px; /* ARREDONDAMENTO DOS CANTOS */
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%; /* GARANTE QUE FIQUE UM ABAIXO DO OUTRO (largura total) */
+}
+
+/* Estiliza os labels */
+#form-cadastro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo do botão de envio (ajuste as cores para Miss Selene) */
+#form-cadastro button {
+    background-color: #5D3FD3; /* Exemplo de cor roxa elegante */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* ... (Seus estilos de HEADER, FOOTER, BODY, etc.) ... */
+
+/* -------------------- ESTILIZAÇÃO DO FORMULÁRIO DE CADASTRO -------------------- */
+
+#form-cadastro {
+    max-width: 500px;
+    margin: 40px auto; 
+    /* ... outras regras ... */
+}
+
+/* ... (As regras .form-group e #form-cadastro input que já garantem o arredondamento e verticalização) ... */
+
+
+/* 📍 NOVO CÓDIGO PARA CENTRALIZAR O TÍTULO - COLE A PARTIR DESTA LINHA */
+.cadastro-section {
+    text-align: center; 
+}
+
+.cadastro-section h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+/* ⬆️ FIM DO NOVO CÓDIGO ⬆️ */
+
+/* -------------------- ESTILIZAÇÃO DA PÁGINA CONTATO -------------------- */
+
+.contato-section {
+    max-width: 700px;
+    margin: 40px auto; 
+    padding: 20px;
+    text-align: center;
+}
+
+.contato-intro {
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Reutiliza o estilo do formulário de Cadastro */
+#form-contato {
+    background-color: #F8F8FF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o conteúdo interno (labels/inputs) à esquerda */
+    margin-bottom: 40px;
+}
+
+/* Estiliza o campo de mensagem */
+#form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px; /* Mantém o arredondamento */
+    border: 1px solid #ccc;
+    resize: vertical; /* Permite redimensionamento vertical, mas não horizontal */
+}
+
+/* Garante que os inputs do Contato também usem as classes de arredondamento */
+#form-contato input[type="text"],
+#form-contato input[type="email"] {
+    /* Reutiliza a largura total e o arredondamento */
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contato-info {
+    margin-bottom: 40px;
+    padding: 15px;
+    border: 1px solid var(--cor-secundaria); /* Adiciona um toque da cor de destaque */
+    border-radius: 8px;
+}
+
+.map-container h3 {
+    margin-bottom: 15px;
+    color: var(--cor-primaria);
+}
